@@ -5,3 +5,5 @@
 idf_component_register(SRC_DIRS "."
                        PRIV_REQUIRES unity test_utils esp_timer esp_pm
                        WHOLE_ARCHIVE)
+
+set_source_files_properties(control_loop.c PROPERTIES COMPILE_OPTIONS "-fno-jump-tables;-fno-tree-switch-conversion")
